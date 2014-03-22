@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # WHO'S USING???
-JAN_USING = False
+JAN_USING = True
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -84,13 +84,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 if JAN_USING:
-    STATIC_ROOT = '/home/janmw/djcode/issues/static/'
+    STATIC_ROOT = '/home/janmw/djcode/issues/static'
 else:
     STATIC_ROOT = '/Users/pingihu/Issues/Issues/static'
 
 # Additional locations of static files
 if JAN_USING:
-    STATICFILES_DIRS = ()
+    STATICFILES_DIRS = ('/home/janmw/djcode/issues/static/js',
+                        '/home/janmw/djcode/issues/static/css',)
 else:
     STATICFILES_DIRS = (
         '/Users/pingihu/Issues/Issues/static/js',

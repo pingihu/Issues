@@ -1,17 +1,20 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap.css">
   <script src = "{{ STATIC_URL }}jquery-1.11.0.min.js"></script>
   <script>
     $( document ).ready(function(){
      $("h1").click(function(){
-      $(this).fade();
+      $(this).fadeOut();
      });
     });
   </script>
 </head> 
 
 <body>
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap.css">
+  <script src="{{ STATIC_URL }}bootstrap.min.js"></script>
   <h1> Issues </h1>
 </body>
 
