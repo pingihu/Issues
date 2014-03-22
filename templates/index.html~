@@ -1,0 +1,15 @@
+<html>
+<head>
+  <script src = "/home/janmw/bootstrap3/bootstrap-3.1.1-dist/js/jquery-1.11.0.mi  n.js"></script>
+</head> 
+<body>
+<h1> Issues </h1>
+<script>
+  $(document).ready(function(){
+   $("h1").hover(function(){
+    $(this).fade();
+   });
+  });
+</script>
+</body>
+</html>
