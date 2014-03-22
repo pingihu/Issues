@@ -5,17 +5,22 @@
   <script src = "{{ STATIC_URL }}jquery-1.11.0.min.js"></script>
   <script>
     $( document ).ready(function(){
-     $("h1").click(function(){
-      $(this).fadeOut();
+     $("h1").css({"color":"white"});
+     $("h1").hover(function(){
+      $(this).fadeToggle();
      });
+     $(".header-div").css({"backgroundColor":"black"});
     });
   </script>
 </head> 
 
 <body>
-  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap.min.css">
   <script src="{{ STATIC_URL }}bootstrap.min.js"></script>
-  <h1> Issues </h1>
+  <div class="header-div">
+    <header class="page-header">
+      <h1> Issues </h1>
+    </header>
+  </div>
 </body>
-
 </html>
