@@ -8,6 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
+# WHO'S USING???
+JAN_USING = False
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -80,7 +83,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/janmw/djcode/issues/static/'
+if JAN_USING:
+    STATIC_ROOT = '/home/janmw/djcode/issues/static/'
+else:
+    STATIC_ROOT = '/Users/pingihu/Issues/Issues/static'
+
+# Additional locations of static files
+if JAN_USING:
+    STATICFILES_DIRS = ()
+else:
+    STATICFILES_DIRS = (
+        '/Users/pingihu/Issues/Issues/static/js',
+        # Put strings here, like "/home/html/static" or "C:/www/django/static".
+        # Always use forward slashes, even on Windows.
+        # Don't forget to use absolute paths, not relative paths.
+    )
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = ( 'django.template.loaders.filesystem.Loader',
@@ -88,5 +106,10 @@ TEMPLATE_LOADERS = ( 'django.template.loaders.filesystem.Loader',
                       # 'django.template.loaders.eggs.Loader', )
                       )
 
-TEMPLATE_DIRS = ( # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates". # Always use forward slashes, even on Windows. # Don't forget to use absolute paths, not relative paths. 
+#Locations of templates
+if JAN_USING:
+    TEMPLATE_DIRS = ( # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates". # Always use forward slashes, even on Windows. # Don't forget to use absolute paths, not relative paths. 
     "/home/janmw/djcode/issues/templates", )
+else:
+    TEMPLATE_DIRS = (
+    "/Users/pingihu/Issues/Issues/templates", )
