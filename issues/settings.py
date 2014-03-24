@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # WHO'S USING???
-JAN_USING = True
+JAN_USING = False
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -95,6 +95,7 @@ if JAN_USING:
 else:
     STATICFILES_DIRS = (
         '/Users/pingihu/Issues/Issues/static/js',
+        '/Users/pingihu/Issues/Issues/static/css'
         # Put strings here, like "/home/html/static" or "C:/www/django/static".
         # Always use forward slashes, even on Windows.
         # Don't forget to use absolute paths, not relative paths.
